@@ -133,6 +133,7 @@ const Home = ({ timelines, skills }) => {
 
   return (
     <div className="home">
+      {console.log(skills)}
       <canvas className="homeCanvas"></canvas>
 
       <div className="homeCanvasContainer">
@@ -168,27 +169,27 @@ const Home = ({ timelines, skills }) => {
 
         <div className="homeCubeSkills">
           <div className="homeCubeSkillsFaces homeCubeSkillsFace1">
-            <img src= "/a.jpg" alt="Face1" />
+            <img src= {skills.image1} alt="Face1" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace2">
-            <img src= "/b.png" alt="Face2" />
+            <img src= {skills.image2}alt="Face2" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace3">
-            <img src="/c.png" alt="Face3" />
+            <img src={skills.image3} alt="Face3" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace4">
-            <img src="/d.png" alt="Face4" />
+            <img src={skills.image4} alt="Face4" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace5">
-            <img src="/e.png" alt="Face5" />
+            <img src={skills.image5} alt="Face5" />
           </div>
 
           <div className="homeCubeSkillsFaces homeCubeSkillsFace6">
-            <img src="/f.png" alt="Face6" />
+            <img src={skills.image6} alt="Face6" />
           </div>
         </div>
 
