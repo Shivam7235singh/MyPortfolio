@@ -1,0 +1,164 @@
+/* Projects Section */
+.projects {
+  min-height: 100vh;
+  padding: 15vmax 5vmax;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* Title Styling */
+.projects > h3 {
+  color: #fff;
+  background-color: hsl(250, 100%, 75%);
+  padding: 1.5vmax 3vmax;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.projects > h3 svg {
+  margin-left: 0.8rem;
+}
+
+/* Project Wrapper */
+.projectsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vmax;
+  padding-top: 5vmax;
+}
+
+/* Project Card */
+.projectCard {
+  width: clamp(280px, 45%, 400px);
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Wrapper */
+.projectImageWrapper {
+  position: relative;
+}
+
+.projectCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* View Demo Overlay */
+.projectCard:hover .projectImageWrapper::after {
+  content: "VIEW DEMO";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.projectImageWrapper::after {
+  opacity: 0;
+}
+
+/* Project Details */
+.projectDetails {
+  padding: 2vmax;
+  text-align: center;
+}
+
+.projectDetails h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectDetails h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.projectDetails p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Delete Button (Admin Only) */
+.adminButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(229, 58, 58, 0.9) ;
+  color: white ;
+  padding: 6px;
+  min-width: 32px ;
+  height: 32px ;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.adminButton:hover {
+  background: rgba(222, 212, 212, 0.9) !important;
+}
+
+/* Footer Message */
+.projects > h3:last-of-type {
+  margin-top: 4vmax;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .projectCard {
+    width: 90%;
+  }
+
+  .projects > h3 {
+    font-size: 1.8rem;
+  }
+
+  .projectsWrapper {
+    gap: 2vmax;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
