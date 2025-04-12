@@ -33,8 +33,8 @@ A dynamic and responsive portfolio website built using the **MERN Stack** (Mongo
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Shivam7235singh/MyPortfolio/new/main.git
-   cd portfolio-mern
+   git clone https://github.com/Shivam7235singh/MyPortfolio.git
+   cd MyPortfolio
 Configure Environment Variables
 
 Create .env files in both /client and /server directories and add:
